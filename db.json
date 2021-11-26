@@ -1,0 +1,289 @@
+{
+  "products": [
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "brand": "brioni",
+      "model": "Карманный",
+      "id": 432
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "brand": "versace",
+      "model": "Карманный",
+      "id": 25
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "brand": "prada",
+      "model": "Карманный",
+      "id": 42323
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "brand": "prada",
+      "model": "Карманный",
+      "id": 42234
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "brand": "armani",
+      "model": "Карманный",
+      "id": 413311
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 123456789,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "brand": "coach",
+      "model": "Карманный",
+      "id": 42335
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "brand": "armani",
+      "model": "Карманный",
+      "id": 443
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "brand": "armani",
+      "model": "Карманный",
+      "id": 534
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "brand": "armani",
+      "model": "Карманный",
+      "id": 2423
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "brand": "lacoste",
+      "model": "Карманный",
+      "id": 423334
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "model": "Карманный",
+      "brand": "prada",
+      "id": 41141
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 700,
+      "color": "gcgjhvvjyivr6",
+      "image": "https://www.tpko.ru/upload/iblock/4a0/044saiw5wdoqp3xsonsxo51i0ot46kd5.jpg",
+      "model": "Карманный",
+      "brand": "lacoste",
+      "id": 422435
+    },
+    {
+      "name": "iPhone 13 proMax",
+      "description": "nsdfhjsgdf",
+      "price": 877676,
+      "image": "bjhbjhb",
+      "brand": "lacoste",
+      "model": "vhgvghvgvg",
+      "id": 423335
+    },
+    {
+      "name": "ergwegghghj",
+      "description": "ghjghjghjghjgjhghj",
+      "price": 687676,
+      "image": "jbjhghjgjhgjg",
+      "brand": "lacoste",
+      "model": "78687678678",
+      "type": "armani",
+      "id": 423336
+    },
+    {
+      "name": "Lens Protector Timaskus",
+      "description": "Защита камеры для Iphone из Тимаскуса",
+      "price": 5900,
+      "image": "https://static.tildacdn.com/tild6632-6466-4230-a532-366264626233/12.jpg",
+      "brand": "prada",
+      "model": "Защита камеры",
+      "id": 423337
+    },
+    {
+      "name": "Carbon Sticker Crocodile",
+      "description": "Уникальное предложение по доступной цене для любителей безупречной эстетики и высоких технологий. Карбоновую наклейку можно с лёгкостью установить на корпус любой модели iPhone! ",
+      "price": 23000,
+      "image": "\thttps://static.tildacdn.com/tild3863-6163-4364-b431-316632653538/_MG_6846.jpg",
+      "brand": "lacoste",
+      "model": "jfbjebferbgjehrgbheb",
+      "id": 423338
+    },
+    {
+      "name": "Carbon Geometric",
+      "description": "Чехол премиум-класса — это главный аргумент уверенного в себе человека. Телефон есть у каждого, а подобрать к нему кейс, который бы соответствовал статусу владельца очень сложно.",
+      "price": 6900,
+      "image": "https://static.tildacdn.com/tild3139-3163-4763-a130-613961626530/--121.jpg",
+      "brand": "prada",
+      "model": "dfgfggergerg",
+      "id": 423339
+    }
+  ],
+  "users": [
+    {
+      "username": "osorov.bayel@gmail.com",
+      "displayName": "bayel osorov",
+      "id": 1
+    },
+    {
+      "username": "bayelstar04@gmail.com",
+      "displayName": "Bayel Osorov",
+      "photoURL": "https://lh3.googleusercontent.com/a/AATXAJw_9UT5qrGkqAYMMaCS0HopJnw8LQ-58ndwrhyw=s96-c",
+      "id": 2
+    },
+    {
+      "username": "dinazhusubalieva1@gmail.com",
+      "displayName": null,
+      "photoURL": null,
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "text": "best seen ever\n",
+      "owner": "dinazhusubalieva1@gmail.com",
+      "displayName": null,
+      "photoURL": null,
+      "productId": "432",
+      "time": "26.11.2021",
+      "timeSeconds": 1637912945309,
+      "id": 1
+    },
+    {
+      "text": "wejfbhhjewfhwb\n",
+      "owner": "dinazhusubalieva1@gmail.com",
+      "displayName": null,
+      "photoURL": null,
+      "productId": "432",
+      "time": "26.11.2021",
+      "timeSeconds": 1637913554205,
+      "id": 2
+    },
+    {
+      "text": "whjefhwjevfhwve",
+      "owner": "dinazhusubalieva1@gmail.com",
+      "displayName": null,
+      "photoURL": null,
+      "productId": "432",
+      "time": "26.11.2021",
+      "timeSeconds": 1637913578001,
+      "id": 3
+    },
+    {
+      "text": "привет я тут",
+      "owner": "osorov.bayel@gmail.com",
+      "displayName": "bayel osorov",
+      "photoURL": "https://lh3.googleusercontent.com/a/AATXAJwFGpCb2IWuzq3pp5nmz9QY3YeHpp1CkRXpfpeT=s96-c",
+      "productId": "432",
+      "time": "26.11.2021",
+      "timeSeconds": 1637913682012,
+      "id": 4
+    }
+  ],
+  "rating": [
+    {
+      "owner": "osorov.bayel@gmail.com",
+      "rate": "5",
+      "productId": "432",
+      "id": 1
+    },
+    {
+      "owner": "bayelstar04@gmail.com",
+      "rate": "5",
+      "productId": "42234",
+      "id": 2
+    },
+    {
+      "owner": "bayelstar04@gmail.com",
+      "rate": "2",
+      "productId": "42335",
+      "id": 3
+    },
+    {
+      "owner": "bayelstar04@gmail.com",
+      "rate": "1",
+      "productId": "413311",
+      "id": 4
+    }
+  ],
+  "likes": [
+    {
+      "productId": "432",
+      "owner": "bayelstar04@gmail.com",
+      "likeCount": 0,
+      "id": 1
+    },
+    {
+      "productId": "432",
+      "owner": "bayelstar04@gmail.com",
+      "likeCount": 1,
+      "id": 2
+    },
+    {
+      "productId": "432",
+      "owner": "bayelstar04@gmail.com",
+      "likeCount": 0,
+      "id": 3
+    },
+    {
+      "productId": "432",
+      "owner": "bayelstar04@gmail.com",
+      "likeCount": 1,
+      "id": 4
+    },
+    {
+      "productId": "432",
+      "owner": "bayelstar04@gmail.com",
+      "likeCount": 0,
+      "id": 5
+    }
+  ]
+}
