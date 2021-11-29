@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import "./CreditCardForm.css";
 import { useNavigate } from "react-router-dom";
 import { clientContext } from "../../../context/ClientContext";
+import { purchaseContext } from "../../../context/PurchaseContext";
 const CreditCardForm = (props) => {
 
   const navigate = useNavigate()
@@ -37,12 +38,22 @@ const CreditCardForm = (props) => {
   };
 
   const { clearCountOfCart } = useContext(clientContext)
-
+  const { addPurchase } = useContext(purchaseContext)
+  let user = JSON.parse(localStorage.getItem('users'))
+  let cart = JSON.parse(localStorage.getItem('cart'))
+  let createdAt = new Date().toLocaleDateString();
+  console.log(createdAt);
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate('/transactionsuccess')
-    localStorage.removeItem('cart')
+    let purhcase = {
+      user: user.username,
+      cart,
+      createdAt: createdAt
+    }
+    addPurchase(purhcase)
     clearCountOfCart()
+    localStorage.removeItem('cart')
   }
 
   return (

@@ -721,6 +721,16 @@ form .signup-link a:hover {
   outline: 0;
 }
 
+/* ? className='login-to' */
+.login-to {
+  color: #1976d2;
+}
+
+.login-to:last-child {
+  margin-left: 20%;
+}
+
+
 @media (max-width: 500px) {
   .thumb {
     height: 50px;

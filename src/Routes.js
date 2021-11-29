@@ -20,41 +20,49 @@ import AuthContextProvider from './context/AuthContext';
 import CommentContextProvider from './context/CommentContext';
 import RatingContextProvider from './context/RatingContext';
 import LikesContextProvider from './context/LikesContext';
+import PurchaseContextProvider from './context/PurchaseContext';
+import PurchaseHistory from './pages/PurchaseHistory';
+import BrowsingContextProvider from './context/BrowsingContext';
 
 const MyRoutes = () => {
     return (
-        <LikesContextProvider>
-            <RatingContextProvider>
-                <CommentContextProvider>
-                    <AuthContextProvider>
-                        <AdminContextProvider>
-                            <ClientContextProvider>
-                                <BrowserRouter>
-                                    <Navbar />
-                                    <Routes>
+        <BrowsingContextProvider>
+            <PurchaseContextProvider>
+                <LikesContextProvider>
+                    <RatingContextProvider>
+                        <CommentContextProvider>
+                            <AuthContextProvider>
+                                <AdminContextProvider>
+                                    <ClientContextProvider>
+                                        <BrowserRouter>
+                                            <Navbar />
+                                            <Routes>
 
-                                        <Route path='/' element={<MainPage />} />
-                                        <Route path='/admin' element={<AdminPage />} />
-                                        <Route path='/admin/add' element={<AddPage />} />
-                                        <Route path='/admin/edit/:id' element={<EditPage />} />
-                                        <Route path='/products' element={<AllUserProducts />} />
-                                        <Route path='/product/:id' element={<DetailPage />} />
-                                        <Route path='/cart' element={<CartPage />} />
-                                        <Route path="/order" element={<OrderPage />} />
-                                        <Route path="/pay" element={<PaymentPage />} />
-                                        <Route path="/transactionsuccess" element={<TransactionSuccess />} />
-                                        <Route path="/register" element={<RegisterPage />} />
-                                        <Route path="/login" element={<LoginPage />} />
-                                        <Route path="/forgot" element={<ForgotPasswordPage />} />
+                                                <Route path='/' element={<MainPage />} />
+                                                <Route path='/admin' element={<AdminPage />} />
+                                                <Route path='/admin/add' element={<AddPage />} />
+                                                <Route path='/admin/edit/:id' element={<EditPage />} />
+                                                <Route path='/products' element={<AllUserProducts />} />
+                                                <Route path='/product/:id' element={<DetailPage />} />
+                                                <Route path='/cart' element={<CartPage />} />
+                                                <Route path="/order" element={<OrderPage />} />
+                                                <Route path="/pay" element={<PaymentPage />} />
+                                                <Route path="/transactionsuccess" element={<TransactionSuccess />} />
+                                                <Route path="/register" element={<RegisterPage />} />
+                                                <Route path="/login" element={<LoginPage />} />
+                                                <Route path="/forgot" element={<ForgotPasswordPage />} />
+                                                <Route path="/purchaseHistory" element={<PurchaseHistory />} />
 
-                                    </Routes>
-                                </BrowserRouter>
-                            </ClientContextProvider>
-                        </AdminContextProvider>
-                    </AuthContextProvider>
-                </CommentContextProvider>
-            </RatingContextProvider>
-        </LikesContextProvider>
+                                            </Routes>
+                                        </BrowserRouter>
+                                    </ClientContextProvider>
+                                </AdminContextProvider>
+                            </AuthContextProvider>
+                        </CommentContextProvider>
+                    </RatingContextProvider>
+                </LikesContextProvider>
+            </PurchaseContextProvider>
+        </BrowsingContextProvider>
     );
 };
 

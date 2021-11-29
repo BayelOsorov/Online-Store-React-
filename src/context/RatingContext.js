@@ -19,7 +19,7 @@ const RatingContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
     const getRates = async (productId) => {
         const { data } = await axios(`${RATING_API}/?productId=${productId}`)
-        console.log(data)
+
         dispatch({
             type: "GET_RATINGS",
             payload: data
@@ -56,12 +56,23 @@ const RatingContextProvider = ({ children }) => {
             }
             await axios.patch(`${RATING_API}/${id}`, newProd)
             getRates(newProd.productId)
-            console.log(id);
         }
         catch (e) {
             console.log(e);
         }
     }
+    // const getRateByUser = async (user) => {
+    //     try {
+    //         const {data} = await axios(`${RATING_API}/?owner=${user}`)
+    //         dispatch({
+    //             type: 'GET_RATE_BY_USER',
+    //             payload: data
+    //         })
+    //     }
+    //     catch (e) {
+    //         console.log(e);
+    //     }
+    // }
     return (
         <ratingContext.Provider value={{
             addRate,

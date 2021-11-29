@@ -12,6 +12,7 @@ import Comments from '../components/User/Comments';
 import MyRating from '../components/User/Rating';
 import { ratingContext } from '../context/RatingContext';
 import MyLikes from '../components/User/MyLikes';
+import { likesContext } from '../context/LikesContext';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -19,12 +20,15 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 const DetailPage = () => {
     const { getDetail, detailProduct, addAndDeleteProductInCart, checkProductInCart, addAndDeleteProductInFavorites, checkFavoriteInFavorites } = useContext(clientContext)
     const { getRates, ratings } = useContext(ratingContext)
-
+    const { getLikes, likes, getLikesByUser, userLikes } = useContext(likesContext)
     const params = useParams()
+    let user = JSON.parse(localStorage.getItem('users'))
     useEffect(() => {
         getDetail(params.id)
         getRates(params.id)
+        getLikes(params.id)
     }, [])
+
     // snackbar
     const [open, setOpen] = React.useState(false);
 
@@ -80,14 +84,18 @@ const DetailPage = () => {
         setOpen4(false);
     };
     // ?Rating
-    let idRate
     let sum = 0
     if (ratings) {
         ratings.map((item) => {
             sum += +item.rate
-            idRate = item.rate
         })
         sum = sum / ratings.length
+    }
+    let countOfLike = 0
+    if (likes) {
+        likes.map((item) => {
+            countOfLike += item.likeCount
+        })
     }
     return (
         <>
@@ -187,8 +195,21 @@ const DetailPage = () => {
                                     )
                                 }
                                 <div className='my-rate' >
-                                    <MyRating idRate={idRate} />
-                                    <MyLikes />
+                                    {
+                                        user ? (
+                                            <>
+                                                <MyRating />
+                                                {countOfLike !== 0 ? countOfLike : null}
+                                                <MyLikes />
+                                            </>
+                                        ) : (
+                                            <Link to='/register' >
+
+                                                <h5 className='login-to' >Войдите чтобы поставить лайк </h5>
+                                            </Link>
+                                        )
+                                    }
+
 
                                 </div>
                             </div>
@@ -199,7 +220,10 @@ const DetailPage = () => {
                 }
 
             </div>
+
+
             <Comments />
+
         </>
     );
 };

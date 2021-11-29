@@ -16,7 +16,7 @@ import { Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { clientContext } from '../context/ClientContext';
 import { ShoppingCart } from "@mui/icons-material";
-
+import ListAltIcon from '@mui/icons-material/ListAlt';
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import Favorites from './User/Favorites';
 import { adminContext } from '../context/AdminContext';
@@ -197,6 +197,21 @@ export default function PrimarySearchAppBar() {
                 </IconButton>
                 <p>Favorites</p>
             </MenuItem>
+            <MenuItem onClick={() => {
+                navigate('/purchaseHistory')
+            }}>
+                <IconButton
+                    size="large"
+                    color="inherit"
+                    style={{ color: "rgba(102, 102, 102, 0.644)" }}
+
+                >
+                    <Badge color="error">
+                        <ListAltIcon />
+                    </Badge>
+                </IconButton>
+                <p>Purchase</p>
+            </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <IconButton
                     size="large"
@@ -291,6 +306,20 @@ export default function PrimarySearchAppBar() {
                                     />
                                 </Badge>
                             </IconButton>
+                            <MenuItem onClick={() => {
+                                navigate('/purchaseHistory')
+                            }}>
+                                <IconButton
+                                    size="large"
+                                    color="inherit"
+                                    style={{ color: "rgba(102, 102, 102, 0.644)" }}
+
+                                >
+                                    <Badge color="error">
+                                        <ListAltIcon />
+                                    </Badge>
+                                </IconButton>
+                            </MenuItem>
                             <IconButton
                                 size="large"
                                 edge="end"
@@ -303,7 +332,9 @@ export default function PrimarySearchAppBar() {
                                 {currentUser ? (
                                     <>
                                         <p style={{ fontSize: '15px' }} className="text3">{currentUser.email}</p>
-                                        <LogoutIcon onClick={logout} />
+                                        <LogoutIcon onClick={() => {
+                                            logout()
+                                        }} />
                                     </>
                                 ) : (
                                     <Link to="/register">

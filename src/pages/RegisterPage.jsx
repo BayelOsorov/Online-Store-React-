@@ -94,6 +94,8 @@ export default function RegisterPage() {
                 onClick={() =>
                   signInWithGoogle()
                     .then((user) => {
+                      navigate('/')
+
                     })
                     .catch((e) => console.log(e.message))
                 }

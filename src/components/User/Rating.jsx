@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { ratingContext } from '../../context/RatingContext';
 
-const MyRating = ({ idRate }) => {
+const MyRating = () => {
     const { addRate,
         getRates,
         changeRate,
@@ -17,6 +17,13 @@ const MyRating = ({ idRate }) => {
     const [inpVal, setInpVal] = useState()
     let user = JSON.parse(localStorage.getItem('users'))
     let tl
+    if (ratings) {
+        ratings.forEach(item => {
+            if (item.owner === user.username) {
+                tl = item.rate
+            }
+        })
+    }
     const addRateToProduct = (e) => {
         let value = e.target.value
         setInpVal(value)
@@ -26,7 +33,6 @@ const MyRating = ({ idRate }) => {
                 if (item.owner === user.username) {
                     tempObj = true
                     tempId = item.id
-                    tl = item.rate
                 }
             })
             if (!tempObj) {
@@ -41,14 +47,19 @@ const MyRating = ({ idRate }) => {
             }
         }
     }
-    idRate = +idRate
+    // idRate = +idRate
     return (
         <div>
-            <Rating
-                name="simple-controlled"
-                value={idRate}
-                onChange={addRateToProduct}
-            />
+            {
+                ratings ? (
+                    <Rating
+                        name="simple-controlled"
+                        value={tl}
+                        onChange={addRateToProduct}
+                    />
+                ) : (<h2>Load</h2>)
+            }
+
 
         </div>
     );

@@ -56,6 +56,7 @@ export default function AuthContextProvider({ children }) {
 
   }
   function logout() {
+    localStorage.removeItem('users')
     return signOut(authh);
   }
 
