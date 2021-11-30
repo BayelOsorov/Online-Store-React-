@@ -13,6 +13,9 @@ import MyRating from '../components/User/Rating';
 import { ratingContext } from '../context/RatingContext';
 import MyLikes from '../components/User/MyLikes';
 import { likesContext } from '../context/LikesContext';
+import { browsingContext } from '../context/BrowsingContext';
+import { recomendContext } from '../context/RecommendContext';
+import RecommendCards from '../components/User/RecommendCards';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -20,7 +23,9 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 const DetailPage = () => {
     const { getDetail, detailProduct, addAndDeleteProductInCart, checkProductInCart, addAndDeleteProductInFavorites, checkFavoriteInFavorites } = useContext(clientContext)
     const { getRates, ratings } = useContext(ratingContext)
-    const { getLikes, likes, getLikesByUser, userLikes } = useContext(likesContext)
+    const { getLikes, likes } = useContext(likesContext)
+    const { getRecommend, recommends } = useContext(recomendContext)
+
     const params = useParams()
     let user = JSON.parse(localStorage.getItem('users'))
     useEffect(() => {
@@ -83,7 +88,9 @@ const DetailPage = () => {
 
         setOpen4(false);
     };
-    // ?Rating
+
+    // !Rating
+
     let sum = 0
     if (ratings) {
         ratings.map((item) => {
@@ -91,38 +98,47 @@ const DetailPage = () => {
         })
         sum = sum / ratings.length
     }
+
+    // !
+
     let countOfLike = 0
     if (likes) {
         likes.map((item) => {
             countOfLike += item.likeCount
         })
     }
+    const { addBrowsing } = useContext(browsingContext)
+    useEffect(() => {
+        addBrowsing(params.id, user.username)
+
+    }, [])
+
     return (
         <>
             <Stack spacing={2} sx={{ width: '100%' }}>
                 <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-                        Added to cart
+                        Добавлено в корзину
                     </Alert>
                 </Snackbar>
             </Stack>
 
             <Stack spacing={2} sx={{ width: '100%' }}>
                 <Snackbar open={open1} autoHideDuration={2000} onClose={handleClose1}>
-                    <Alert severity="error">Deleted from cart</Alert>
+                    <Alert severity="error">Удалено из корзины</Alert>
                 </Snackbar>
             </Stack>
             <Stack spacing={2} sx={{ width: '100%' }}>
                 <Snackbar open={open3} autoHideDuration={2000} onClose={handleClose3}>
                     <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-                        Added to favorites
+                        Добавлено в избранное
                     </Alert>
                 </Snackbar>
             </Stack>
 
             <Stack spacing={2} sx={{ width: '100%' }}>
                 <Snackbar open={open4} autoHideDuration={2000} onClose={handleClose4}>
-                    <Alert severity="error">Deleted from favorites</Alert>
+                    <Alert severity="error">Удалено из избранных</Alert>
                 </Snackbar>
             </Stack>
             <div className='detail-page'>
@@ -137,16 +153,18 @@ const DetailPage = () => {
                             <div className="box">
                                 <div className="row">
                                     <h2>{detailProduct.name}</h2>
-                                    <span>${detailProduct.price}</span>
+                                    <span>{detailProduct.price}c</span>
                                 </div>
                                 <Rating
                                     precision={0.5} value={sum}
                                     name="simple-controlled"
                                     readOnly
                                 />
+                                <p>Бренд: {detailProduct.brand}</p>
+
                                 <p>{detailProduct.description}</p>
                                 <Link to='/products' >
-                                    <Button style={{ display: 'block' }} >Back to products</Button>
+                                    <Button style={{ display: 'block' }} >к продуктам</Button>
                                 </Link>
                                 {
                                     checkProductInCart(detailProduct.id) ? (
@@ -156,7 +174,7 @@ const DetailPage = () => {
                                                 handleClick1()
                                             }}
                                             className='shop-btn' color='error' variant='outlined' size="large">
-                                            Delete from cart
+                                            Удалить из корзины
                                         </Button>
 
                                     ) : (
@@ -166,7 +184,7 @@ const DetailPage = () => {
                                                 handleClick()
                                             }}
                                             className='shop-btn' color='success' variant='outlined' size="large">
-                                            Add to cart
+                                            Добавить в корзину
                                         </Button>
                                     )
                                 }
@@ -179,7 +197,7 @@ const DetailPage = () => {
 
                                             }}
                                             className='shop-btn' color='error' variant='outlined' size="large">
-                                            Delete from favorites
+                                            Удалить из избранных
                                         </Button>
 
                                     ) : (
@@ -190,23 +208,23 @@ const DetailPage = () => {
 
                                             }}
                                             className='shop-btn' color='success' variant='outlined' size="large">
-                                            Add to favorites
+                                            Добавить в избранное
                                         </Button>
                                     )
                                 }
                                 <div className='my-rate' >
                                     {
-                                        user ? (
+                                        !user || user.username === 'guest' ? (
+                                            <Link to='/register' >
+                                                <h5 className='login-to' >Войдите чтобы оставить лайк и рейтинг </h5>
+                                            </Link>
+                                        ) : (
                                             <>
                                                 <MyRating />
                                                 {countOfLike !== 0 ? countOfLike : null}
                                                 <MyLikes />
                                             </>
-                                        ) : (
-                                            <Link to='/register' >
 
-                                                <h5 className='login-to' >Войдите чтобы поставить лайк </h5>
-                                            </Link>
                                         )
                                     }
 
@@ -220,8 +238,7 @@ const DetailPage = () => {
                 }
 
             </div>
-
-
+            <RecommendCards />
             <Comments />
 
         </>

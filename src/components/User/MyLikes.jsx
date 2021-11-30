@@ -50,19 +50,18 @@ const MyLikes = () => {
             }
         }
     }
+
     return (
         <>
             {
                 likes ? (
 
                     <Button onClick={handleLike} >
-                        {/* <FavoriteBorderIcon /> */}
                         {
-                            isLiked == 0 ? (
+                            isLiked === 0 || isLiked == undefined ? (
                                 <FavoriteBorderIcon style={{ color: 'black' }} />
-
                             ) : (
-                                <FavoriteIcon color='error' />
+                                < FavoriteIcon color='error' />
                             )
                         }
                     </Button >

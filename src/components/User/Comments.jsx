@@ -127,7 +127,13 @@ const Comments = () => {
                 ) : (null)
             }
             {
-                user ? (
+                !user || user.username === 'guest' ? (
+                    <Link to='/register' >
+                        <h5 className='login-to' >Войдите чтобы оставить комментарий</h5>
+                    </Link>
+
+                ) : (
+
                     <>
                         <div className='comments-block' >
                             <form>
@@ -176,10 +182,6 @@ const Comments = () => {
                             </form>
                         </div>
                     </>
-                ) : (
-                    <Link to='/register' >
-                        <h5 className='login-to' >Войдите чтобы оставить комментарий</h5>
-                    </Link>
                 )
             }
 

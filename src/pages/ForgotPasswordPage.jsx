@@ -25,7 +25,7 @@ export default function ForgotPasswordPage() {
             ></label>
           </Link>
 
-          <div className="text">Forgot password</div>
+          <div className="text">Забыли пароль</div>
 
           <form
             onSubmit={async (e) => {
@@ -54,7 +54,7 @@ export default function ForgotPasswordPage() {
             }}
           >
             <div className="data">
-              <label>Email or Phone</label>
+              <label>Введите ваш email</label>
               <input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -66,14 +66,14 @@ export default function ForgotPasswordPage() {
             <div className="btn">
               <div className="inner"></div>
 
-              <button type="submit">submit</button>
+              <button type="submit">Далее</button>
             </div>
-            <span className="or">or</span>
+            <span className="or">или</span>
 
             <div className="btn">
               <div className="inner"></div>
               <Link to="/login">
-                <button type="submit">login</button>
+                <button type="submit">Войти</button>
               </Link>
             </div>
           </form>

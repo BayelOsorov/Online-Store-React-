@@ -7,9 +7,8 @@ const MyRating = () => {
     const { addRate,
         getRates,
         changeRate,
-        getRateById,
         ratings,
-        rate } = useContext(ratingContext)
+    } = useContext(ratingContext)
     let params = useParams()
     useEffect(() => {
         getRates(params.id)
@@ -47,7 +46,6 @@ const MyRating = () => {
             }
         }
     }
-    // idRate = +idRate
     return (
         <div>
             {

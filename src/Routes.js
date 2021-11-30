@@ -23,46 +23,53 @@ import LikesContextProvider from './context/LikesContext';
 import PurchaseContextProvider from './context/PurchaseContext';
 import PurchaseHistory from './pages/PurchaseHistory';
 import BrowsingContextProvider from './context/BrowsingContext';
+import ViewsPage from './pages/ViewsPage';
+import RecommendContextProvider from './context/RecommendContext';
 
 const MyRoutes = () => {
     return (
-        <BrowsingContextProvider>
-            <PurchaseContextProvider>
-                <LikesContextProvider>
-                    <RatingContextProvider>
-                        <CommentContextProvider>
-                            <AuthContextProvider>
-                                <AdminContextProvider>
-                                    <ClientContextProvider>
-                                        <BrowserRouter>
-                                            <Navbar />
-                                            <Routes>
+        <RecommendContextProvider>
+            <BrowsingContextProvider>
+                <PurchaseContextProvider>
+                    <LikesContextProvider>
+                        <RatingContextProvider>
+                            <CommentContextProvider>
+                                <AuthContextProvider>
+                                    <AdminContextProvider>
+                                        <ClientContextProvider>
+                                            <BrowserRouter>
+                                                <Navbar />
+                                                <Routes>
 
-                                                <Route path='/' element={<MainPage />} />
-                                                <Route path='/admin' element={<AdminPage />} />
-                                                <Route path='/admin/add' element={<AddPage />} />
-                                                <Route path='/admin/edit/:id' element={<EditPage />} />
-                                                <Route path='/products' element={<AllUserProducts />} />
-                                                <Route path='/product/:id' element={<DetailPage />} />
-                                                <Route path='/cart' element={<CartPage />} />
-                                                <Route path="/order" element={<OrderPage />} />
-                                                <Route path="/pay" element={<PaymentPage />} />
-                                                <Route path="/transactionsuccess" element={<TransactionSuccess />} />
-                                                <Route path="/register" element={<RegisterPage />} />
-                                                <Route path="/login" element={<LoginPage />} />
-                                                <Route path="/forgot" element={<ForgotPasswordPage />} />
-                                                <Route path="/purchaseHistory" element={<PurchaseHistory />} />
+                                                    <Route path='/' element={<MainPage />} />
+                                                    <Route path='/admin' element={<AdminPage />} />
+                                                    <Route path='/admin/add' element={<AddPage />} />
+                                                    <Route path='/admin/edit/:id' element={<EditPage />} />
+                                                    <Route path='/products' element={<AllUserProducts />} />
+                                                    <Route path='/product/:id' element={<DetailPage />} />
+                                                    <Route path='/cart' element={<CartPage />} />
+                                                    <Route path="/order" element={<OrderPage />} />
+                                                    <Route path="/pay" element={<PaymentPage />} />
+                                                    <Route path="/transactionsuccess" element={<TransactionSuccess />} />
+                                                    <Route path="/register" element={<RegisterPage />} />
+                                                    <Route path="/login" element={<LoginPage />} />
+                                                    <Route path="/forgot" element={<ForgotPasswordPage />} />
+                                                    <Route path="/purchaseHistory" element={<PurchaseHistory />} />
+                                                    <Route path="/views" element={<ViewsPage />} />
 
-                                            </Routes>
-                                        </BrowserRouter>
-                                    </ClientContextProvider>
-                                </AdminContextProvider>
-                            </AuthContextProvider>
-                        </CommentContextProvider>
-                    </RatingContextProvider>
-                </LikesContextProvider>
-            </PurchaseContextProvider>
-        </BrowsingContextProvider>
+
+                                                </Routes>
+                                            </BrowserRouter>
+                                        </ClientContextProvider>
+                                    </AdminContextProvider>
+                                </AuthContextProvider>
+                            </CommentContextProvider>
+                        </RatingContextProvider>
+                    </LikesContextProvider>
+                </PurchaseContextProvider>
+            </BrowsingContextProvider>
+        </RecommendContextProvider>
+
     );
 };
 

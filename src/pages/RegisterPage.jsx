@@ -27,7 +27,7 @@ export default function RegisterPage() {
               title="close"
             ></label>
           </Link>
-          <div className="text">Sign Up </div>
+          <div className="text">Регистрация</div>
 
 
           <form
@@ -59,7 +59,7 @@ export default function RegisterPage() {
           // action="#"
           >
             <div className="data">
-              <label>Email</label>
+              <label>Ваш Email</label>
               <input
                 // value="email"
                 onChange={(e) => setEmail(e.target.value)}
@@ -69,7 +69,7 @@ export default function RegisterPage() {
               />
             </div>
             <div className="data">
-              <label>Write your password</label>
+              <label>Ваш пароль</label>
               <input
                 // value="password"
                 onChange={(e) => setPassword(e.target.value)}
@@ -85,7 +85,7 @@ export default function RegisterPage() {
             </div>
             <div className="btn">
               <div className="inner"></div>
-              <button type="submit">sign up</button>
+              <button type="submit">Регистрация</button>
             </div>
             {/* google sign in  */}
             <div className="btn">
@@ -107,12 +107,12 @@ export default function RegisterPage() {
                   src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                   alt=""
                 />
-                <span className="span1">Login with Google</span>
+                <span className="span1">Войти с помощью Google</span>
               </button>
             </div>
 
             <div className="signup-link">
-              Already a member? <Link to="/login">Login</Link>
+              Уже есть аккаунт? <Link to="/login">Войти</Link>
             </div>
           </form>
 

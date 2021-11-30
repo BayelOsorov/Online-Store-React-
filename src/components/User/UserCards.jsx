@@ -11,6 +11,7 @@ const UserCards = ({ item }) => {
 
         <Card className='grid-content-card' sx={{ maxWidth: 300 }}>
             <CardMedia
+                style={{ objectFit: "contain" }}
                 component="img"
                 alt="green iguana"
                 height="240"
@@ -21,7 +22,7 @@ const UserCards = ({ item }) => {
                     {item.name}
                 </p>
                 <Typography variant="body2" color="text.secondary">
-                    {item.description}
+                    {item.description.slice(0, 100)}...
                 </Typography>
             </CardContent>
             <CardActions className='my-cards' >

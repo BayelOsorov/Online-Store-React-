@@ -9,6 +9,7 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import MoreIcon from "@mui/icons-material/MoreVert";
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -22,7 +23,7 @@ import Favorites from './User/Favorites';
 import { adminContext } from '../context/AdminContext';
 import { useAuth } from '../context/AuthContext';
 import LogoutIcon from '@mui/icons-material/Logout';
-
+import HistoryIcon from '@mui/icons-material/History';
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -88,6 +89,16 @@ export default function PrimarySearchAppBar() {
     const { currentUser, logout, adminEmail } = useAuth();
 
     // ! >
+    // ! localstorage acc
+    let user = JSON.parse(localStorage.getItem('users'))
+    if (!user) {
+        let guest = {
+            username: 'guest',
+            displayName: null,
+            photoUrl: null,
+        }
+        localStorage.setItem('users', JSON.stringify(guest))
+    }
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -131,12 +142,12 @@ export default function PrimarySearchAppBar() {
 
             {
                 currentUser ? (
-                    <>
-                        <Button onClick={logout}>
-                            <h6 className="text3">{currentUser.email}</h6>
-                            <LogoutIcon />
-                        </Button>
-                    </>
+
+                    <Button onClick={logout}>
+                        <h6 className="text3">{currentUser.email}</h6>
+                        <LogoutIcon />
+                    </Button>
+
                 ) : (
                     <Link to="/register">
                         <Button >
@@ -179,7 +190,7 @@ export default function PrimarySearchAppBar() {
                             <ShoppingCart />
                         </Badge>
                     </IconButton>
-                    <p style={{ color: '#1a1a1a' }} >Cart</p>
+                    <p style={{ color: '#1a1a1a' }} >Корзина</p>
                 </MenuItem>
             </Link>
             <MenuItem onClick={() => {
@@ -195,7 +206,7 @@ export default function PrimarySearchAppBar() {
                         <BookmarkBorderIcon />
                     </Badge>
                 </IconButton>
-                <p>Favorites</p>
+                <p>Избранное</p>
             </MenuItem>
             <MenuItem onClick={() => {
                 navigate('/purchaseHistory')
@@ -203,14 +214,29 @@ export default function PrimarySearchAppBar() {
                 <IconButton
                     size="large"
                     color="inherit"
-                    style={{ color: "rgba(102, 102, 102, 0.644)" }}
+                    style={{ color: "black" }}
 
                 >
                     <Badge color="error">
                         <ListAltIcon />
                     </Badge>
                 </IconButton>
-                <p>Purchase</p>
+                <p>Покупки</p>
+            </MenuItem>
+            <MenuItem onClick={() => {
+                navigate('/views')
+            }}>
+                <IconButton
+                    onClick={() => navigate('/views')}
+                    size="large"
+                    aria-label="show 17 new notifications"
+                    style={{ color: "black" }}
+                >
+                    <Badge color="error">
+                        <HistoryIcon />
+                    </Badge>
+                </IconButton>
+                <p>История</p>
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <IconButton
@@ -222,7 +248,7 @@ export default function PrimarySearchAppBar() {
                 >
                     <AccountCircle />
                 </IconButton>
-                <p>Profile</p>
+                <p>Профиль</p>
             </MenuItem>
         </Menu>
     );
@@ -241,7 +267,7 @@ export default function PrimarySearchAppBar() {
                             aria-label="open drawer"
                             sx={{ mr: 2 }}
                         >
-                            <MenuIcon />
+                            {/* <MenuIcon /> */}
                         </IconButton>
                         <Typography
                             variant="h6"
@@ -250,7 +276,9 @@ export default function PrimarySearchAppBar() {
                             sx={{ display: { xs: 'none', sm: 'block' } }}
                             onClick={() => navigate('/')}
                         >
-                            <img className='nav-logo' src="http://www.freelargeimages.com/wp-content/uploads/2014/11/Disney_logo.png" alt="" />
+                            <img className='nav-logo'
+                                src="https://cdn-icons.flaticon.com/png/512/4507/premium/4507860.png?token=exp=1638301618~hmac=13b2c1ec62151f6c1d5d2d774c91ff7e"
+                                alt="" />
                         </Typography>
                         <Search>
                             <SearchIconWrapper>
@@ -306,6 +334,16 @@ export default function PrimarySearchAppBar() {
                                     />
                                 </Badge>
                             </IconButton>
+                            <IconButton
+                                onClick={() => navigate('/views')}
+                                size="large"
+                                aria-label="show 17 new notifications"
+                                style={{ color: "rgba(102, 102, 102, 0.644)" }}
+                            >
+                                <Badge color="error">
+                                    <HistoryIcon />
+                                </Badge>
+                            </IconButton>
                             <MenuItem onClick={() => {
                                 navigate('/purchaseHistory')
                             }}>
@@ -347,7 +385,18 @@ export default function PrimarySearchAppBar() {
                                 )}
                             </IconButton>
                         </Box>
-
+                        <Box sx={{ display: { xs: "flex", md: "none" } }}>
+                            <IconButton
+                                size="large"
+                                aria-label="show more"
+                                aria-controls={mobileMenuId}
+                                aria-haspopup="true"
+                                onClick={handleMobileMenuOpen}
+                                style={{ color: "rgba(102, 102, 102, 0.644)" }}
+                            >
+                                <MoreIcon />
+                            </IconButton>
+                        </Box>
                     </Toolbar>
                 </AppBar>
                 {renderMobileMenu}

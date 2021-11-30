@@ -20,7 +20,7 @@ const CartPage = () => {
         <>
             <div className="cart-page">
                 <Link to='/products' >
-                    <Button  >To products</Button>
+                    <Button>К продуктам</Button>
                 </Link>
                 <h2>Cart</h2>
                 {cart ? (
@@ -30,10 +30,10 @@ const CartPage = () => {
                                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                                     <TableHead>
                                         <TableRow>
-                                            <TableCell>Name</TableCell>
-                                            <TableCell align="right">Image</TableCell>
-                                            <TableCell align="right">Count</TableCell>
-                                            <TableCell align="right">Total Price</TableCell>
+                                            <TableCell>Название</TableCell>
+                                            <TableCell align="right">Фото</TableCell>
+                                            <TableCell align="right">Кол-во</TableCell>
+                                            <TableCell align="right">Сумма</TableCell>
                                             <TableCell align="right">#</TableCell>
                                         </TableRow>
                                     </TableHead>
@@ -77,21 +77,21 @@ const CartPage = () => {
                                                             getCart()
                                                         }}
                                                     >
-                                                        Delete from cart
+                                                        Удалить из корзины
                                                     </Button>{" "}
                                                 </TableCell>
                                             </TableRow>
                                         ))}
                                         <TableRow>
                                             <TableCell colSpan={3} align="right">
-                                                Total price:
+                                                Общая сумма:
                                             </TableCell>
                                             <TableCell colSpan={1} align="right">
                                                 {cart.totalPrice} com
                                             </TableCell>
                                             <TableCell colSpan={1} align="right">
                                                 <Link to="/order">
-                                                    <Button variant="contained" color='success' >Buy Now</Button>
+                                                    <Button variant="contained" color='success' >Купить  сейчас</Button>
                                                 </Link>
                                             </TableCell>
                                         </TableRow>
@@ -101,9 +101,9 @@ const CartPage = () => {
                         </div>
                     ) : (
                         <>
-                            <h2>Your cart is empty</h2>
+                            <h2>Корзина пуста</h2>
                             <Link to='/products' >
-                                <Button variant='outlined' >To products</Button>
+                                <Button variant='outlined' >К продуктам</Button>
                             </Link>
                         </>
                     )

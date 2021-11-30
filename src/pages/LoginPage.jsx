@@ -28,7 +28,7 @@ export default function Registerpage() {
             ></label>
           </Link>
 
-          <div className="text">Login Form</div>
+          <div className="text">Войти</div>
 
           <form
             onSubmit={async (e) => {
@@ -57,7 +57,7 @@ export default function Registerpage() {
             }}
           >
             <div className="data">
-              <label>Email</label>
+              <label>Ваш Email</label>
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 name="email"
@@ -65,7 +65,7 @@ export default function Registerpage() {
               />
             </div>
             <div className="data">
-              <label>Password</label>
+              <label>Пароль</label>
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 name="password"
@@ -75,15 +75,15 @@ export default function Registerpage() {
             </div>
             <div className="forgot-pass">
               <Link to="/forgot">
-                <p href="#/">Forgot password?</p>
+                <p href="#/">забыли пароль?</p>
               </Link>
             </div>
             <div className="btn">
               <div className="inner"></div>
-              <button type="submit">Login</button>
+              <button type="submit">Войти</button>
             </div>
             <div className="signup-link">
-              Don't have an account? <Link to="/register">Sign Up</Link>
+              Нет аккаунта? <Link to="/register">Регистрация</Link>
             </div>
           </form>
 

@@ -173,6 +173,7 @@ a {
 
 .grid-content-card {
   margin: 20px auto;
+  cursor: pointer;
 }
 
 .card-btn {
@@ -193,6 +194,21 @@ a {
 .admin-cards {
   display: flex;
   justify-content: space-evenly;
+}
+
+
+/* ? favorites */
+
+/* Favorites */
+
+.css-1wnsr1i {
+  border: none !important;
+  border-radius: 10px;
+}
+
+.favorite {
+  display: flex;
+  align-items: center;
 }
 
 /* User Card */
@@ -721,6 +737,8 @@ form .signup-link a:hover {
   outline: 0;
 }
 
+
+
 /* ? className='login-to' */
 .login-to {
   color: #1976d2;
@@ -743,6 +761,29 @@ form .signup-link a:hover {
   .thumb img {
     width: 50px;
   }
+
+  .favorite {
+    display: block;
+  }
+
+  .favorite-modal {
+    padding: 0 !important;
+  }
+
+  .favorite span {
+    margin-left: 50px !important;
+    text-align: center !important;
+    display: block;
+  }
+}
+
+
+.no-recomms {
+  /* text-align: center; */
+  /* justify-content: center;
+  align-items: center; */
+  margin: 0 auto;
+  padding-bottom: 40px;
 }
 
 /*  */
