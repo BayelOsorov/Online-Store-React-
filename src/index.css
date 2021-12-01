@@ -161,15 +161,11 @@ a {
   line-height: 2.2;
 }
 
-.css-1xez8po-MuiPaper-root-MuiCard-root {
+.bx-none {
   box-shadow: none !important;
-}
-
-.css-r40f8v-MuiTypography-root {
   text-align: center;
   color: #000 !important;
 }
-
 
 .grid-content-card {
   margin: 20px auto;
@@ -185,7 +181,8 @@ a {
   color: #fff !important;
 }
 
-.css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
+
+.detal-btn button {
   border: 1px solid #000 !important;
   transition-duration: 1.3s !important;
 }
@@ -201,7 +198,7 @@ a {
 
 /* Favorites */
 
-.css-1wnsr1i {
+.modal-my {
   border: none !important;
   border-radius: 10px;
 }

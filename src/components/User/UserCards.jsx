@@ -9,7 +9,7 @@ const UserCards = ({ item }) => {
         checkFavoriteInFavorites } = React.useContext(clientContext)
     return (
 
-        <Card className='grid-content-card' sx={{ maxWidth: 300 }}>
+        <Card className='grid-content-card bx-none' sx={{ maxWidth: 300 }}>
             <CardMedia
                 style={{ objectFit: "contain" }}
                 component="img"
@@ -17,15 +17,15 @@ const UserCards = ({ item }) => {
                 height="240"
                 image={item.image}
             />
-            <CardContent>
+            <CardContent className='bx-none'>
                 <p className='card-title' >
                     {item.name}
                 </p>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" >
                     {item.description.slice(0, 100)}...
                 </Typography>
             </CardContent>
-            <CardActions className='my-cards' >
+            <CardActions className='my-cards detal-btn' >
                 <Button
                     onClick={() => addAndDeleteProductInCart(item)}
                     className='shop-btn' color={checkProductInCart(item.id) ? 'error' : 'success'} variant='outlined' size="large">

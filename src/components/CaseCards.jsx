@@ -15,7 +15,7 @@ export default function CaseCards() {
         <Container fixed className='card-container' >
             <Grid container className='card-flex' >
                 <Link to='/product/423337' >
-                    <Card className='grid-content-card' sx={{ maxWidth: 300 }}>
+                    <Card className='grid-content-card bx-none' sx={{ maxWidth: 300 }}>
                         <CardMedia
                             component="img"
                             alt="green iguana"
@@ -26,14 +26,14 @@ export default function CaseCards() {
                             <p className='card-title'>
                                 ЗАЩИТА КАМЕРЫ
                             </p>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography variant="body2" >
                                 Мы придумали как защитить камеру и подготовили коллекцию из титана, тимаскуса и карбона
                             </Typography>
                         </CardContent>
                     </Card >
                 </Link>
                 <Link to='/product/423338' >
-                    <Card className='grid-content-card' sx={{ maxWidth: 300 }}>
+                    <Card className='grid-content-card bx-none' sx={{ maxWidth: 300 }}>
                         <CardMedia
                             component="img"
                             alt="green iguana"
@@ -44,14 +44,14 @@ export default function CaseCards() {
                             <p className='card-title' >
                                 УГЛЕСТИКЕРЫ
                             </p>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography variant="body2" >
                                 Мы придумали клеящийся стикер для тех, кто выбирает компромис между габаритами и защитой
                             </Typography>
                         </CardContent>
                     </Card>
                 </Link>
                 <Link to='product/423339'>
-                    <Card className='grid-content-card' sx={{ maxWidth: 300 }}>
+                    <Card className='grid-content-card bx-none' sx={{ maxWidth: 300 }}>
                         <CardMedia
                             component="img"
                             alt="green iguana"
@@ -62,7 +62,7 @@ export default function CaseCards() {
                             <p className='card-title' >
                                 КАРБОН ПРОТЕКТ
                             </p>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography variant="body2" >
                                 Минималистичный 3D дизайн, разработанный нашим ателье для премиальной защиты смартфона
                             </Typography>
                         </CardContent>

@@ -28,6 +28,7 @@ const Favorites = ({ open, handleClose }) => {
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
+                className='modal-my'
             >
                 <Box className='favorite-modal' sx={style}>
                     <Typography component={'span'} style={{ textAlign: 'center' }} id="modal-modal-title" variant="h6" > Избранное

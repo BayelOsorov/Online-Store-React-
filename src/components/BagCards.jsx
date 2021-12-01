@@ -13,7 +13,7 @@ export default function BagCards() {
     return (
         <Container fixed className='card-container' >
             <Grid container >
-                <Card className='grid-content-card' sx={{ maxWidth: 300 }}>
+                <Card className='grid-content-card bx-none' sx={{ maxWidth: 300 }}>
                     <CardMedia
                         component="img"
                         alt="green iguana"
@@ -24,14 +24,14 @@ export default function BagCards() {
                         <p className='card-title' >
                             Рюкзаки
                         </p>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" >
                             Рюкзаки Snowman Max из итальянской кожи и натурального карбона - образец элегантной классики в минимализме.
                         </Typography>
                     </CardContent>
 
                 </Card>
 
-                <Card className='grid-content-card' sx={{ maxWidth: 300 }}>
+                <Card className='grid-content-card bx-none' sx={{ maxWidth: 300 }}>
                     <CardMedia
                         component="img"
                         alt="green iguana"
@@ -42,14 +42,14 @@ export default function BagCards() {
                         <p className='card-title'>
                             Сумки
                         </p>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" >
                             Наша коллекция стильных сумок является отличным функциональным решением в городской среде
                         </Typography>
                     </CardContent>
 
                 </Card >
 
-                <Card className='grid-content-card' sx={{ maxWidth: 300 }}>
+                <Card className='grid-content-card bx-none' sx={{ maxWidth: 300 }}>
                     <CardMedia
                         component="img"
                         alt="green iguana"
@@ -60,7 +60,7 @@ export default function BagCards() {
                         <p className='card-title' >
                             КОШЕЛЬКИ
                         </p>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" >
                             Инновационные технологии JUMO в совмещении традиционных материалов и карбона
                         </Typography>
                     </CardContent>
