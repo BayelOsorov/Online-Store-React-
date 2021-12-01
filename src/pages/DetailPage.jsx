@@ -32,7 +32,7 @@ const DetailPage = () => {
         getDetail(params.id)
         getRates(params.id)
         getLikes(params.id)
-    }, [])
+    }, [params.id])
 
     // snackbar
     const [open, setOpen] = React.useState(false);

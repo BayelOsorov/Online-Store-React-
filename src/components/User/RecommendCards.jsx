@@ -5,9 +5,6 @@ import { recomendContext } from '../../context/RecommendContext';
 import Grid from '@mui/material/Grid';
 import { clientContext } from '../../context/ClientContext';
 
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
-
 const RecommendCards = () => {
     const { getDetail } = useContext(clientContext)
     const { getRecommend, recommends } = useContext(recomendContext)
@@ -24,6 +21,7 @@ const RecommendCards = () => {
         navigate(`/product/${id}`)
         getDetail(params.id)
         getRecommend(params.id)
+        window.scrollTo(0, 0)
     }
     return (
         <>
@@ -36,12 +34,13 @@ const RecommendCards = () => {
                                     {
                                         recommends.slice(0, 3).map((item) => (
                                             <>
-                                                <Card onClick={() => handleClick(item.id)} key={item.id} className='grid-content-card' sx={{ maxWidth: 300 }}>
+                                                <Card onClick={() => handleClick(item.id)} key={item.id} className='grid-content-card bx-none' sx={{ maxWidth: 300 }}>
                                                     <CardMedia
                                                         component="img"
                                                         alt="green iguana"
                                                         height="240"
                                                         image={item.image}
+                                                        style={{ objectFit: 'contain' }}
                                                     />
                                                     <CardContent>
                                                         <p className='card-title' >
