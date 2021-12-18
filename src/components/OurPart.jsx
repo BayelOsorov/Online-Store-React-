@@ -1,9 +1,7 @@
 import * as React from 'react';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { Grid } from '@mui/material';
 
 
 export default function OurPart() {
@@ -14,9 +12,6 @@ export default function OurPart() {
             <Container fixed>
                 <h2 className='fot-h2'>Наши партнеры</h2>
                 <div className='fot-images' >
-                    {/* ours */}
-
-                    {/* international */}
 
                     <img className='fot-img' src="http://www.zecraft.com/wp-content/uploads/2016/04/brioni-logotype.png" alt="" />
 
