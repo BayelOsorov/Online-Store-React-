@@ -2,8 +2,8 @@
   "name": "my-project",
   "version": "0.1.0",
   "engines": {
-    "node": "17.x",
-    "npm": "8.x"
+    "node": "17.2.0",
+    "npm": "8.1.4"
   },
   "private": true,
   "dependencies": {
