@@ -69,7 +69,7 @@ export default function AuthContextProvider({ children }) {
 
   function forgotPassword(email) {
     return sendPasswordResetEmail(authh, email, {
-      url: "http://localhost:3000/login",
+      url: "https://bayel-store.herokuapp.com/login",
     });
   }
   async function addUserToJson(email, displayName, photoURL) {
